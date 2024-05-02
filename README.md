@@ -28,7 +28,9 @@ Automatically powers fans when room temperature exceeds a threshold. Turns off f
 - Configuring Zigbee bridge.
 - Using API data for fan control.
 
-## **Setup**
+## **Circuit/Schematic Diagram **
+![image](https://github.com/GreenMailBox/Fan-Automation-IoT-for-Home/assets/80927465/9ed12163-4471-4b0f-854e-e6b3f25b2713)
+![image](https://github.com/GreenMailBox/Fan-Automation-IoT-for-Home/assets/80927465/e2ee8a6e-1d16-43f7-8bf5-4865317202c0)
 
 ### **Dependencies**
 
