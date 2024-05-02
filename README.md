@@ -42,9 +42,38 @@ Automatically powers fans when room temperature exceeds a threshold. Turns off f
   sudo python3.7 get-pip.py
   pip install paho-mqtt
   pip install Adafruit_DHT
+
+  ### **Raspberry Pi Setup**
+
+To set up the Raspberry Pi for this project, follow these steps:
+
+1. **Download Raspbian:** Obtain the latest version of Raspbian from the official Raspberry Pi website and flash it onto an SD card using balenaEtcher or a similar tool.
+
+2. **Connect Peripherals:** Connect a keyboard, mouse, monitor, and power supply to the Raspberry Pi.
+
+3. **Initial Boot:** Insert the SD card into the Raspberry Pi and power it on. Follow the on-screen instructions to complete the initial setup of Raspbian.
+
+4. **Connect to Wi-Fi:** Use the graphical interface or command line to connect the Raspberry Pi to your Wi-Fi network.
+
+5. **Update System:** Open a terminal and run the following commands to ensure your system is up to date:
+    ```bash
+    sudo apt update
+    sudo apt upgrade
+    ```
+
+6. **Install Dependencies:** Install necessary dependencies such as Python, Git, and any other libraries required for your project.
+
+7. **Clone Repository:** Clone your project repository onto the Raspberry Pi using Git.
+
+8. **Configure GPIO:** If your project involves interacting with GPIO pins, make sure to configure them properly using the RPi.GPIO library or similar.
+
+9. **Run Your Project:** Navigate to the project directory and run your Python script or execute your program as needed.
+
+10. **Enjoy Your Project:** Your Raspberry Pi is now set up and ready to run your IoT project!
+
+
   
 ### **Parts List**
-
 - **DHT 11 temperature/humidity sensor**
 - **SONOFF S31 Lite Zigbee smart plug**
 - **Fan**
