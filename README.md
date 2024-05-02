@@ -52,3 +52,27 @@ Automatically powers fans when room temperature exceeds a threshold. Turns off f
 - **LCD1602**
 - **5k resistor** (10k resistor also works)
 - **LED**
+
+### **Algorithm Description**
+
+Below is a list of functions discussing what will be accomplished with our program:
+
+1. **Obtaining User Input:** A Python function obtains user input for the temperature at which they would like to keep the fan on. This includes settings for always-on mode at night and usual hours when the user is sleeping or not at home.
+
+2. **Fan Activation based on Environmental Data:** A Python function takes humidity and temperature measurements from the DHT22 sensor, compares them with the user-inputted parameters, and remotely turns on the fan when necessary.
+
+3. **Displaying Environmental Data:** A Python function displays the current temperature and humidity on the LCD screen, along with other important information such as the duration the fan has been on.
+
+After setting up automatic fan control based on user parameters, we can integrate AccuWeather's API data:
+
+1. **Location Identification:** A Python function takes a zip code and API key and returns the location ID as a string for that zip code.
+
+2. **Current Conditions Retrieval:** A Python function takes the location ID and API key, returning the current weather conditions as a Python list for later parsing.
+
+3. **Past 24 Hours Conditions Retrieval:** A Python function takes the location ID and API key, returning the conditions from the past 24 hours as a Python list for later parsing.
+
+Once AccuWeather's API data is ready for parsing, we can enhance our program further:
+
+1. **Forecast Data Parsing:** A Python function detects forecast data, checks the minimum/maximum temperatures over the past 6 hours, and displays them.
+
+2. **Forecasted High and Low Temperature Display:** A Python function detects forecast data for the current day, displaying the forecasted high and low temperatures. If both temperatures are above 80°F, the fan will be on throughout the day regardless of the indoor temperature.
